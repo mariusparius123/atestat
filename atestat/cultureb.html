@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+<h1 align="center" style="color:white">George Enescu</h1>
+
+<title>Project1</title>
+
+
+  <link href="style.css" type="text/css" rel="stylesheet">
+<style>
+    #slider {
+      width: 400px;
+            height: 500px;
+      overflow: hidden;
+      box-shadow:0px 23px 23px 1px black ;
+      position: relative;
+      border:20px solid white;
+
+    }
+    
+    #slider img {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+    
+    .arrow {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    
+    .arrow:hover {
+      background-color:  #141E30;
+    }
+    
+    .arrow-left {
+      left: 2px;
+    }
+    
+    .arrow-right {
+      right: 2px;
+    }
+  </style>
+  <script>
+
+
+function closeAllDropdowns() {
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+}
+
+
+    function myFunction() {closeAllDropdowns();
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+function myFunction2() {closeAllDropdowns();
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+
+    var currentSlide = 0;
+    var totalSlides = 3;
+
+    function showSlide(n) {
+      var slides = document.getElementsByClassName("slide");
+      currentSlide += n;
+
+      if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+      } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+      }
+
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[currentSlide].style.display = "block";
+    }
+
+
+
+
+    window.onclick=function(event){
+      if(!event.target.matches('.dropbtn')){
+        closeAllDropdowns();
+      }
+    };
+
+
+
+
+
+  </script>
+
+</head>
+<body>
+
+
+
+<header align='center'>
+<a href="index.html"><button type="button" >Acasa</button></a>
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Viata</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="week1.html">Copilaria</a>
+    <a href="week2.html">Activitatea</a>
+
+  </div>
+</div>
+
+	<a href="cultureb.html" ><button >Muzica</button>
+ 
+
+
+<a href="freetime.html"><button type="button4">Opera Oedip</button></a>
+</header>
+
+
+
+
+  
+<div class="box" align='center'><div id="slider">
+    <div class="arrow arrow-left" onclick="showSlide(-1)">&#8592;</div>
+    
+          <div class="slide">
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/b5Pn1X1_a64?si=pI1rGKpl2aZt4f2y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
+   </div>
+    
+	
+	  
+          <div class="slide">
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/B_jvGUrKxZQ?si=I3PGOTqiTb8C4YxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   </div>
+    
+   
+   
+
+   
+          <div class="slide">
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/fwxuMDxT9Dw?si=wpMEU8nsXYZzGEgi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   </div>
+    
+   
+          <div class="slide">
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/uvpjT9ltdrY?si=g0GWfcN7fEaeoLI_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   </div>
+    
+
+
+
+          <div class="slide">
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/JoRfmwANLsM?si=8IGToc2tzHRxgBEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   </div>
+    
+	
+
+
+
+
+
+
+
+
+    <div class="arrow arrow-right" onclick="showSlide(1)">&#8594;</div>
+  </div>
+
+
+
+
+  <p>
+
+		Acestea sunt doar cateva dintre operele muzicale de-ale lui George Enescu 
+
+  </p>
+</div>
+
+
+
+
+
+
+  <script>
+    showSlide(0);
+  </script>
+
+
+
+
+
+</body>
+
+
+
+</html>

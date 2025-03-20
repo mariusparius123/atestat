@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+<h1 align="center" style="color:white">George Enescu</h1>
+
+<title>Project1</title>
+
+
+  <link href="style.css" type="text/css" rel="stylesheet">
+<style>
+    #slider {
+      width: 400px;
+            height: 500px;
+      overflow: hidden;
+      box-shadow:0px 23px 23px 1px black ;
+      position: relative;
+      border:20px solid white;
+
+    }
+    
+    #slider img {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+    
+    .arrow {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    
+    .arrow:hover {
+      background-color:  #141E30;
+    }
+    
+    .arrow-left {
+      left: 2px;
+    }
+    
+    .arrow-right {
+      right: 2px;
+    }
+  </style>
+  <script>
+
+
+function closeAllDropdowns() {
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+}
+
+
+    function myFunction() {closeAllDropdowns();
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+function myFunction2() {closeAllDropdowns();
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+
+    var currentSlide = 0;
+    var totalSlides = 3;
+
+    function showSlide(n) {
+      var slides = document.getElementsByClassName("slide");
+      currentSlide += n;
+
+      if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+      } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+      }
+
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[currentSlide].style.display = "block";
+    }
+
+
+
+
+    window.onclick=function(event){
+      if(!event.target.matches('.dropbtn')){
+        closeAllDropdowns();
+      }
+    };
+
+
+
+
+
+  </script>
+
+</head>
+<body>
+
+
+
+
+<header align='center'>
+<a href="index.html"><button type="button1" >Acasa</button></a>
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Viata</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="week1.html">Copilaria</a>
+    <a href="week2.html">Activitatea</a>
+
+  </div>
+</div>
+
+	<a href="cultureb.html" ><button >Muzica</button>
+ 
+
+
+<a href="freetime.html"><button type="button4">Opera Oedip</button></a>
+</header>
+
+
+
+
+  
+
+
+  <p>
+
+Opera Oedip
+În anii 1921-1931 lucra la opera Oedip, monumentală creație dramatică și muzicală, care abia în ultimii ani a început să se impună pe scenele teatrelor de operă din lume. O dedică Mariei Tescanu Rosetti (fostă Cantacuzino), cu care se va căsători în 1937. Aceasta fusese una din doamnele de onoare ale Reginei Maria și, după o căsătorie cu prințul Cantacuzino și o pasiune pentru filozoful Nae Ionescu, și-a turnat acid pe față. La auzul veștii, Enescu s-a întors de la Paris imediat la București și a vegheat la căpătâiul doamnei de care era îndrăgostit. În urma acestui episod, Maruca Rosetti-Cantacuzino va rămâne desfigurată toată viața și va apărea în fotografii cu un voal negru pe față. Pe 4 decembrie 1937 Enescu se va căsători cu ea. Opera Oedip a fost terminată la conacul Marucăi din Tescani, într-un pavilion de vară ridicat pe o colină artificială din pământ, chiar în mijlocul pădurii. Premiera operei Oedip a avut loc la Paris pe 13 martie 1936 și s-a bucurat de un succes imediat. Primul bariton care l-a interpretat pe Oedip pe scena operei din Paris a fost Andre Piernet. Opera se inspiră din cele doua piese păstrate din ciclul de tragedii tebane ale lui Sofocle, Oedip la Colonos și Oedip rege. Libretistul operei a fost Edmond Fleg. Cariera internațională a operei a fost însă întreruptă de declanșarea celui de-al Doilea Război Mondial, când, în 1940, Paris-ul a fost ocupat de armata germană.
+Opera și-a păstrat însă popularitatea în România, fiind de mai multe ori montată în timpul Festivalului Internațional George Enescu din București, premiera românească datând din 1958, când în rolul titular a evoluat David Ohanesian, regia aparținând lui Jean Rânzescu, iar dirijor fiind Constantin Silvestri. O spectaculoasă punere în scenă s-a făcut în regia lui Andrei Șerban (1995), care a provocat numeroase controverse.
+În ultimii 20 de ani se observă un puternic reviriment al operei, prin montări în mai multe țări ale lumii, printre care Italia, Germania, Austria, Marea Britanie, Statele Unite ale Americii, Portugalia.
+
+
+
+  </p>
+  
+
+
+<div class="box" align='center'><div id="slider">
+    <div class="arrow arrow-left" onclick="showSlide(-1)">&#8592;</div>
+    <img class="slide" height='2000px' width='auto' src="imagini/0n.jpg" alt="Image 1">
+ 
+        <img class="slide" src="imagini/03.jpg" alt="Image 2">
+
+    <div class="arrow arrow-right" onclick="showSlide(1)">&#8594;</div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+  <script>
+    showSlide(0);
+  </script>
+
+
+
+
+
+</body>
+
+
+
+</html>
